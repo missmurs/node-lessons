@@ -1,10 +1,3 @@
-import fs from 'node:fs/promises';
+import { startServer } from './server.js';
 
-(async () => {
-  try {
-    const data = await fs.readFile('file.txt', 'utf8');
-    console.log('Вміст файлу:', data);
-  } catch (err) {
-    console.error('Помилка читання файлу:', err);
-  }
-})();
+startServer();
